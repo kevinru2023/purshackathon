@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"091ab3bceac345ab","type":"text","text":"Backend(Handles all the good stuff)","x":-120,"y":-220,"width":250,"height":60,"color":"2"},
+		{"id":"fc09002fba9219cc","type":"text","text":"Merchant device ","x":-500,"y":-150,"width":270,"height":80,"color":"1"},
+		{"id":"49a8d93e7450df51","type":"text","text":"Customer device ","x":200,"y":-150,"width":250,"height":60,"color":"4"},
+		{"id":"3ff1e98f41ba24e0","x":-615,"y":80,"width":250,"height":60,"type":"text","text":"Merchant"},
+		{"id":"c61f61cfd5ef95b3","x":280,"y":80,"width":250,"height":60,"type":"text","text":"Customer"}
+	],
+	"edges":[
+		{"id":"88a4a626b8ca213c","fromNode":"fc09002fba9219cc","fromSide":"right","toNode":"091ab3bceac345ab","toSide":"left"},
+		{"id":"fa64ed1b3cf8dea0","fromNode":"091ab3bceac345ab","fromSide":"right","toNode":"49a8d93e7450df51","toSide":"left"},
+		{"id":"74f638ef79234de1","fromNode":"49a8d93e7450df51","fromSide":"bottom","toNode":"fc09002fba9219cc","toSide":"bottom"},
+		{"id":"aa17221b0d196be9","fromNode":"fc09002fba9219cc","fromSide":"top","toNode":"49a8d93e7450df51","toSide":"top"},
+		{"id":"774c2415a0354731","fromNode":"091ab3bceac345ab","fromSide":"bottom","toNode":"fc09002fba9219cc","toSide":"right"},
+		{"id":"48aa0bdccff080a3","fromNode":"091ab3bceac345ab","fromSide":"bottom","toNode":"49a8d93e7450df51","toSide":"left"},
+		{"id":"39f69e50737c88f0","fromNode":"c61f61cfd5ef95b3","fromSide":"top","toNode":"49a8d93e7450df51","toSide":"bottom"},
+		{"id":"b71f4a08f878f1ba","fromNode":"3ff1e98f41ba24e0","fromSide":"top","toNode":"fc09002fba9219cc","toSide":"bottom"}
+	]
+}

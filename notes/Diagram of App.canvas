@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"2c018262c4c677db","x":-216,"y":-219,"width":250,"height":60,"type":"text","text":"First time logging in?"},
+		{"id":"025bdad17c1cdb05","type":"text","text":"Create an account ","x":120,"y":-219,"width":250,"height":60},
+		{"id":"0a9e039be3abb7fb","x":450,"y":-219,"width":250,"height":60,"type":"text","text":"Generate Cool QR code "},
+		{"id":"9316ce30d7ab45d7","type":"text","text":"User ","x":-435,"y":-80,"width":250,"height":50},
+		{"id":"fbc8249f346dba0f","x":-260,"y":85,"width":250,"height":50,"type":"text","text":"Already a User? "},
+		{"id":"9739be68bd29b801","x":80,"y":80,"width":250,"height":60,"type":"text","text":"2FA by SMS "},
+		{"id":"d58e13c99ae3f099","x":386,"y":-18,"width":250,"height":60,"type":"text","text":"Make payment through app"}
+	],
+	"edges":[
+		{"id":"311df6393d1a9e39","fromNode":"025bdad17c1cdb05","fromSide":"right","toNode":"0a9e039be3abb7fb","toSide":"left"},
+		{"id":"a5324f052be6992b","fromNode":"9316ce30d7ab45d7","fromSide":"top","toNode":"2c018262c4c677db","toSide":"left"},
+		{"id":"1e446ff8104cad9c","fromNode":"2c018262c4c677db","fromSide":"right","toNode":"025bdad17c1cdb05","toSide":"left"},
+		{"id":"85c710f4e831d4c7","fromNode":"9316ce30d7ab45d7","fromSide":"bottom","toNode":"fbc8249f346dba0f","toSide":"left"},
+		{"id":"44fcdbd476b8ebe1","fromNode":"fbc8249f346dba0f","fromSide":"right","toNode":"9739be68bd29b801","toSide":"left"},
+		{"id":"ac65deefdafe0447","fromNode":"9739be68bd29b801","fromSide":"right","toNode":"d58e13c99ae3f099","toSide":"left"}
+	]
+}
