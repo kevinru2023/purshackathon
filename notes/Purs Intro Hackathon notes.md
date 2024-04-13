@@ -7,17 +7,17 @@ Tips:
 - The app should be blazing fast 
 
 Parameters from Purs: 
-	- Merchant Device => Android Phone 
-	- Customer Device => Any standard smartphone 
-	- Information flow => up to us 
+- Merchant Device => Android Phone 
+- Customer Device => Any standard smartphone 
+- Information flow => up to us 
 
 
 Potential Ideas from Purs: 
-	- Wallet QR Code + Front-Facing Camera 
-		- Concerns
-		    - Easy to put QR code in apple wallet? 
-		    - Android support? 
-		    - QR code static? Fraud Risk 
+- Wallet QR Code + Front-Facing Camera 
+	- Concerns
+	- Easy to put QR code in apple wallet? 
+	- Android support? 
+	- QR code static? Fraud Risk 
 	- NFC Tap using Host Card Emulation 
 		- Customer device basically scans merchant device (similar to how you use apple pay on some tablets at some stores)
 		- Concerns 
@@ -34,8 +34,7 @@ Potential Ideas from Purs:
 		- Similar to RFID tags (think RFID tags, if you don't know RFID it's how OSU student IDs let you get into dorms)
 		- So customer device taps NFC tag, and NFC tag is commutating to merchant device 
 		- Example given was somebody taps the device, then sets an amount to request, then next person to tap device is prompted to send money
-		- Opposite of credit cards in a sense, for example if somebody steals the tag, you couldn't steal money, you would be sending money. 
-		- 
+		- Opposite of credit cards in a sense, for example if somebody steals the tag, you couldn't steal money, you would be sending money.  
 
 Judging Criteria 
 - 20% Live demo
