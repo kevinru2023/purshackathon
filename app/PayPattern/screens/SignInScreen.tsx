@@ -9,19 +9,32 @@ import { View,
   Image} from 'react-native';
 
 const SignInScreen: React.FC = () => {
-  const [text, onChangeText] = React.useState('Useless Text');
+  const [emailtext, ChangeTextEmail] = React.useState('Email');
+  const [passwordtext, ChangeTextPassword] = React.useState('Password');
   return (
     <View style={styles.container}>
 
       <Text style={styles.titletext}>PayPattern</Text>
-
+      <Text style={styles.subheadingtext}>Personalize your payments</Text>
       <Image source={require('./assets/logo.png')} style={styles.logo} />
       <View style={styles.rectangle}>
         <SafeAreaView>
+        <Text style={styles.textforboxs}>Email</Text>
           <TextInput
             style={styles.input}
-            onChangeText={onChangeText}
-            value={text}
+            onChangeText={ChangeTextEmail}
+            value={emailtext}
+            autoCapitalize='none'
+            clearTextOnFocus={true}
+          />
+          <Text style={styles.textforboxs}>Password</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={ChangeTextPassword}
+            value={passwordtext}
+            autoCapitalize='none'
+            clearTextOnFocus= {true}
+            secureTextEntry= {true}
           />
         </SafeAreaView>
         <Pressable
@@ -30,7 +43,7 @@ const SignInScreen: React.FC = () => {
         >
           <Text style={styles.buttonText}>Sign in</Text>
         </Pressable>
-        
+        <Text>Don't have an account? Sign up now!</Text>
         <Pressable
           style={styles.button}
           onPress={() => Alert.alert('Sign up pressed')}
@@ -56,6 +69,11 @@ const styles = StyleSheet.create({
     color:'white',
     textAlign: 'center',  
   },
+  subheadingtext:{
+    fontSize:18, 
+    color: 'white',
+    textAlign: 'center', 
+  },  
 
   input: {
     flexGrow:0,
@@ -84,8 +102,7 @@ const styles = StyleSheet.create({
   },
 
   rectangle:{
-    width: 300, 
-    height:300, 
+    flex:1,  
     borderRadius: 30,
     backgroundColor: 'white', 
     padding: 10,  
@@ -96,6 +113,12 @@ const styles = StyleSheet.create({
   logo: {
     width:100, 
     height:100,   
+  }, 
+  textforboxs: { 
+    textAlign: 'left', 
+    fontSize: 12,  
+    marginLeft: 12,
+    marginTop: 1, 
   }
 });
 
