@@ -7,29 +7,38 @@ import { View,
   Alert,
   SafeAreaView,
   Image} from 'react-native';
+import { commonStyles } from './styles/commonstyles';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SignInScreen: React.FC = () => {
+  //i hate react native. 
+  const navigation = useNavigation();
+  //down below is the logic stuff for the email and password here we should add backend stuffs 
   const [emailtext, ChangeTextEmail] = React.useState('Email');
   const [passwordtext, ChangeTextPassword] = React.useState('Password');
-  return (
-    <View style={styles.container}>
 
-      <Text style={styles.titletext}>PayPattern</Text>
+  return (
+    <View style={commonStyles.container}>
+
+      <Text style={commonStyles.titleText}>PayPattern</Text>
       <Text style={styles.subheadingtext}>Personalize your payments</Text>
       <Image source={require('./assets/logo.png')} style={styles.logo} />
       <View style={styles.rectangle}>
         <SafeAreaView>
-        <Text style={styles.textforboxs}>Email</Text>
+        <Text style={commonStyles.textforboxs}>Email</Text>
           <TextInput
-            style={styles.input}
+          //grab user email input and validate it probably 
+            style={commonStyles.input}
             onChangeText={ChangeTextEmail}
             value={emailtext}
             autoCapitalize='none'
             clearTextOnFocus={true}
           />
-          <Text style={styles.textforboxs}>Password</Text>
+          <Text style={commonStyles.textforboxs}>Password</Text>
           <TextInput
-            style={styles.input}
+          //grabbing user input here 
+            style={commonStyles.input}
             onChangeText={ChangeTextPassword}
             value={passwordtext}
             autoCapitalize='none'
@@ -38,17 +47,19 @@ const SignInScreen: React.FC = () => {
           />
         </SafeAreaView>
         <Pressable
-          style={styles.button}
-          onPress={() => Alert.alert('Sign in pressed')}
+        //add logic for sign in screen here 
+          style={commonStyles.button}
+          onPress={() => navigation.navigate('Home')}
         >
-          <Text style={styles.buttonText}>Sign in</Text>
+          <Text style={commonStyles.buttonText}>Sign in</Text>
         </Pressable>
         <Text>Don't have an account? Sign up now!</Text>
         <Pressable
-          style={styles.button}
-          onPress={() => Alert.alert('Sign up pressed')}
+        //add logic for sign up button gotta connect to db at some point 
+          style={commonStyles.button}
+          onPress={() => navigation.navigate('SignUp')} 
         >
-          <Text style={styles.buttonText}>Sign up</Text>
+          <Text style={commonStyles.buttonText}>Sign up</Text>
         </Pressable>
       </View>
     </View>
@@ -56,50 +67,11 @@ const SignInScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    backgroundColor:'#2F2A2A',
-    padding:24,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  titletext:{
-    fontSize:42, 
-    color:'white',
-    textAlign: 'center',  
-  },
   subheadingtext:{
     fontSize:18, 
     color: 'white',
     textAlign: 'center', 
   },  
-
-  input: {
-    flexGrow:0,
-    margin: 12,
-    width: 250, 
-    borderColor:'gray', 
-    borderWidth: 1,
-    padding: 10,
-  },
-
-  button: {
-    justifyContent: 'center', 
-    alignItems:'center', 
-    backgroundColor: '#4CF567',
-    padding: 10,
-    width: 250, 
-    height: 50,
-    marginVertical: 10,
-    borderRadius: 10,
-  },
-
-  buttonText: {
-    fontSize: 16,
-    color: 'black',
-    textAlign: 'center',
-  },
 
   rectangle:{
     flex:1,  
@@ -114,12 +86,6 @@ const styles = StyleSheet.create({
     width:100, 
     height:100,   
   }, 
-  textforboxs: { 
-    textAlign: 'left', 
-    fontSize: 12,  
-    marginLeft: 12,
-    marginTop: 1, 
-  }
 });
 
 export default SignInScreen;
