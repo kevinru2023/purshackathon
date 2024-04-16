@@ -10,7 +10,6 @@ import { View,
 import { commonStyles } from './styles/commonstyles';
 import { useNavigation } from '@react-navigation/native';
 
-
 const SignInScreen: React.FC = () => {
   //i hate react native. 
   const navigation = useNavigation();
@@ -22,9 +21,12 @@ const SignInScreen: React.FC = () => {
     <View style={commonStyles.container}>
 
       <Text style={commonStyles.titleText}>PayPattern</Text>
+
       <Text style={styles.subheadingtext}>Personalize your payments</Text>
+
       <Image source={require('./assets/logo.png')} style={styles.logo} />
-      <View style={styles.rectangle}>
+
+      <View style={commonStyles.rectangle}>
         <SafeAreaView>
         <Text style={commonStyles.textforboxs}>Email</Text>
           <TextInput
@@ -46,18 +48,22 @@ const SignInScreen: React.FC = () => {
             secureTextEntry= {true}
           />
         </SafeAreaView>
+
         <Pressable
         //add logic for sign in screen here 
           style={commonStyles.button}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Home')} //gonna change this because home is actually gonna be a tab nav 
         >
           <Text style={commonStyles.buttonText}>Sign in</Text>
         </Pressable>
+
         <Text>Don't have an account? Sign up now!</Text>
+
         <Pressable
         //add logic for sign up button gotta connect to db at some point 
           style={commonStyles.button}
-          onPress={() => navigation.navigate('SignUp')} 
+          onPress={() => navigation.navigate('SignUp')}
+  
         >
           <Text style={commonStyles.buttonText}>Sign up</Text>
         </Pressable>
@@ -72,15 +78,6 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center', 
   },  
-
-  rectangle:{
-    flex:1,  
-    borderRadius: 30,
-    backgroundColor: 'white', 
-    padding: 10,  
-    justifyContent: 'center',
-    alignItems: 'center',
-   },
 
   logo: {
     width:100, 

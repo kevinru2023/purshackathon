@@ -39,11 +39,20 @@ export const commonStyles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
-  
+
   textforboxs: { 
     textAlign: 'left', 
     fontSize: 12,  
     marginLeft: 12,
     marginTop: 1, 
-  }
+  }, 
+  
+  rectangle:{
+    flex:1,  
+    borderRadius: 30,
+    backgroundColor: 'white', 
+    padding: 10,  
+    justifyContent: 'center',
+    alignItems: 'center',
+   }
 });
