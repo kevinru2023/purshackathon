@@ -54,5 +54,20 @@ export const commonStyles = StyleSheet.create({
     padding: 10,  
     justifyContent: 'center',
     alignItems: 'center',
-   }
+   },
+   circle:{
+    backgroundColor: 'white', 
+    borderRadius:90, 
+    width: 145, 
+    height: 145, 
+    justifyContent:'center',
+    alignItems: 'center', 
+    marginBottom:12, 
+  }, 
+
+  logo:{ 
+    width:100, 
+    height:100,
+    marginBottom: 5,  
+  }  
 });

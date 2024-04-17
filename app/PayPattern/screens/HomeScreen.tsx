@@ -4,7 +4,8 @@ import { View,
   Pressable, 
   Alert, 
   StyleSheet, 
-  Image
+  Image, 
+  Modal
 } from 'react-native';
 import { commonStyles } from './styles/commonstyles';
 
@@ -13,8 +14,8 @@ const HomeScreen: React.FC = () => {
     <View style={commonStyles.container}>
       <Text style={commonStyles.titleText}>PayPattern</Text>
 
-      <View style={styles.circle}>
-        <Image source={require('./assets/qr-code.png')} style={styles.logo}/>
+      <View style={commonStyles.circle}>
+        <Image source={require('./assets/qr-code.png')} style={commonStyles.logo}/>
       </View>
 
       <Text style={styles.nametext}>Bob</Text>
@@ -50,24 +51,6 @@ const styles = StyleSheet.create({
     overflow:'hidden', 
     padding: 5,  
   }, 
-
-  circle:{
-    backgroundColor: 'white', 
-    borderRadius:90, 
-    width: 145, 
-    height: 145, 
-    justifyContent:'center',
-    alignItems: 'center', 
-    marginBottom:12, 
-  }, 
-
-  logo:{ 
-    width:100, 
-    height:100,
-    marginBottom: 5,  
-  }  
-  
-  
 })
 
 export default HomeScreen;
